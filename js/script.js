@@ -16,12 +16,12 @@ function initMap() {
 
   const icons = {
     clissold: {
-      icon: "media/garden_center_picture.jpg",
+      icon: "media/clissold.jpg",
     },
   };
 
   var features = [
-    { position: { lat: 41.95, lng: -87.72 }, type: "gardencenter" },
+    { position: { lat: 41.95, lng: -87.72 }, type: "clissold" },
   ];
 
   for (let i = 0; i < features.length; i++) {
