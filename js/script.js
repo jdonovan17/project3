@@ -14,12 +14,6 @@ function initMap() {
   });
   infowindow.open(map, marker);
 
-  const icons = {
-    clissold: {
-      icon: "media/clissold.jpg",
-    },
-  };
-
   var features = [
     { position: { lat: 41.95, lng: -87.72 }, type: "clissold" },
   ];
