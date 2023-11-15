@@ -15,7 +15,7 @@ function initMap() {
   infowindow.open(map, marker);
 
   const icons = {
-    gardencenter: {
+    clissold: {
       icon: "media/garden_center_picture.jpg",
     },
   };
