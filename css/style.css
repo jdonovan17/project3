@@ -1,1 +1,65 @@
+ul,
+ol {
+  list-style: none;
+}
 
+body {
+  font-family: 'Monaco', Monospace;
+  background-color: #778899;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header {
+  background-color: #A9A9A9;
+  color: #191970;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #191970;
+  font-weight: bold;
+  font-size: 16px; 
+}
+
+section {
+  background-color: #808080;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center; 
+}
+
+h1, h2, h3, h4 {
+  color: #191970;
+}
+
+ul {
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  margin: 20px auto; 
+}
