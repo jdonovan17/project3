@@ -1,36 +1,36 @@
-function init() {
-	alert('it works');
-	
-}
-
-google.maps.event.addDomListener(window, 'load', init);
-
-
 function initMap() {
-  const myLatLng = { lat: 41.76999521182157, lng: -87.70415171237143};
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: myLatLng,
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 41.95535438394767, lng: -87.72210225143667 },
+    zoom: 12,
   });
 
-  new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: "Hello World!",
+  var marker = new google.maps.Marker({
+    position: { lat: 41.95535438394767, lng: -87.72210225143667 },
+    map: map,
   });
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "This is where I work!",
+  });
+  infowindow.open(map, marker);
+
+  const icons = {
+    gardencenter: {
+      icon: "media/garden_center_picture.jpg",
+    },
+  };
+
+  var features = [
+    { position: { lat: 41.95, lng: -87.72 }, type: "gardencenter" },
+  ];
+
+  for (let i = 0; i < features.length; i++) {
+    const marker = new google.maps.Marker({
+      position: features[i].position,
+      icon: icons[features[i].type].icon,
+      map: map,
+    });
+  }
 }
 
-window.initMap = initMap;
-
-let map;
-
-async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
-
-  map = new Map(document.getElementById("map"), {
-    center: { lat:  41.76999521182157, lng:-87.70415171237143},
-    zoom: 8,
-  });
-}
-
-initMap();
+google.maps.event.addDomListener(window, 'load', initMap);
