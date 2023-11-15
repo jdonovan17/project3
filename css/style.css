@@ -64,6 +64,15 @@ img {
   margin: 20px auto; 
 }
 
+#wrapper2 {
+  width: 850px;
+  height: 600px;
+  background-color:#808080;
+  margin:0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
 #canvas {
   width: 700px;
   height: 500px;
