@@ -1,51 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTD-8">
-  <title>Map</title>
-  <meta name="viewport" content="initial-scale=1.0">
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="basicmap.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&family=Maiden+Orange&family=Tilt+Neon&display=swap" rel="stylesheet">
- <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap" 
-   async defer></script>  
-   <script defer
-	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&libraries=visualization&callback=initMap"></script>
-<script a sync type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-</head>
-<body>
-  <header>
-      <nav id="main-navbar">
-        <div id="navbar-container">
-          <ul>
-            <li><a href="index.html"><strong>Resume</strong></a></li>
-            <li><a href="page2.html"><strong>Donnie Darko</strong></a></li>
-            <li><a href="page3.html"><strong>Silent Hill 2</strong></a></li>
-	    <li><a href="page4.html"><strong>Map</strong></a></li>
-          </ul>
-        </div>
-		</header>
-		<script>
-		var map;
-		function initmap() {
-		  map = new google.maps.Map(document.getElementById('map'), {
-		    center: {lat: 41.76999521182157, lng: },-87.70415171237143
-			zoom: 8
-		  });
-		 }
-		 
-	  </script>
-	  <div id="wrapper2">
-  <div id="canvas"><div id="map">
-</div></div>
-
+  <head>
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Resume</a></li>
+          <li><a href="page2.html">Donnie Darko</a></li>
+          <li><a href="page3.html">Silent Hill 2</a></li>
+          <li><a href="page4.html">Map</a></li>
+        </ul>
       </nav>
-    
-</div>
-
-</body>
+    </header>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap"
+    async defer></script>
+  </body>
 </html>
