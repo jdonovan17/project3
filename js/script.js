@@ -1,43 +1,36 @@
 function init() {
-	var el = document.getElementById('canvas');
-	var myLocation = new google.maps.LatLng(41.835117, -87.627130);
-	var mapOptions = {
-	  center: myLocation,
-      zoom: 18,
-	  mapTypeid: google.maps.MapTypeId.SATELLITE,
-	  mapTypeControlOptions: {
-		  position: google.maps.ControlPosition.BOTTOM_CENTER
-	  }
-    };
-	
-	var myMap = new google.maps.Map(el, mapOptions);
-	
-	var marker = new google.maps.Marker({
-		position: myLocation,
-		map: myMap,
-		animation: google.maps.Animation.Bounce,
-		icon: 'bow_man.jpg'
-	});
-	
-	var contentstring = '<h1> Area name</h1><p>< Words</p>
-	
-	var infowindow = new google.maps.InfoWindow({
-		content: contentstring
-	});
-	
-	google.maps.event.addListener(marker, 'mouseover', function()  {
-		infowindow.open(myMap, marker);
-	});
-	
+	alert('it works');
 	
 }
 
 google.maps.event.addDomListener(window, 'load', init);
 
-var map;
-		function initmap() {
-		  map = new google.maps.Map(document.getElementById('map'), {
-		    center: {lat: -34.397, lng: 150.644},
-			zoom: 8
-		  });
-		 }
+
+function initMap() {
+  const myLatLng = { lat: 41.76999521182157, lng: -87.70415171237143};
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: myLatLng,
+  });
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+  });
+}
+
+window.initMap = initMap;
+
+let map;
+
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    center: { lat:  41.76999521182157, lng:-87.70415171237143},
+    zoom: 8,
+  });
+}
+
+initMap();
