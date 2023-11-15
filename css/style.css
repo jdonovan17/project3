@@ -64,25 +64,12 @@ img {
   margin: 20px auto; 
 }
 
-#wrapper2 {
-  width: 850px;
-  height: 600px;
-  background-color:#808080;
-  margin:0 auto;
-  overflow: hidden;
-  border-radius: 25px;
-}
-
-#canvas {
-  width: 700px;
-  height: 500px;
-  background-color: #ccc;
-  margin: 30px auto;
-  border-radius: 25px;
-}
-
 #map{
- width: 100%;
+ width: 80%;
  height: 500px;
- border-radius: 25px;
+ margin: 20px;
+ margin-top: 200px;
+ max-width: 100%;
+ margin-left: auto;
+ margin-right: auto;
 }
