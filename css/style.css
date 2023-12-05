@@ -73,3 +73,12 @@ img {
  margin-left: auto;
  margin-right: auto;
 }
+
+@media (min-width: 460px) {
+Section{
+	font-size: 14px;
+}}
+@media (max-width:300px) {
+Section{
+	font-size: 14px;
+}}
